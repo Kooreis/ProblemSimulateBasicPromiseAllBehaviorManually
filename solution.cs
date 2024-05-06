@@ -1,6 +1,10 @@
-function promiseAll(promises) {
-    return new Promise((resolve, reject) => {
-        let results = [];
-        let count = 0;
-    });
+for (let i = 0; i < promises.length; i++) {
+    promises[i]
+        .then((value) => {
+            results[i] = value;
+            count++;
+        })
+        .catch((error) => {
+            reject(error);
+        });
 }
